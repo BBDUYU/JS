@@ -222,6 +222,7 @@ nav {
         display: none;
     }
     .links {
+        /*중요*/
         height: auto;
         display: flex;
     }
