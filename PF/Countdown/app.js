@@ -22,6 +22,7 @@ const weekdays = [
     "Saturday",
 ];
 
+//body태그 연동
 const giveaway = document.querySelector(".giveaway");
 const deadline = document.querySelector(".deadline");
 const items = document.querySelectorAll(".deadline-format h4");
@@ -33,7 +34,7 @@ let tempDay = tempDate.getDate();
 
 // let futureDate = new Date(2025, 3, 10, 20, 0, 0);
 
-const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 20, 30, 0);
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 20, 30, 0); //미래 날짜를 현재 날짜에 +10일 20시 30분으로 설정
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
@@ -54,6 +55,7 @@ function getRemainingTime() {
      * 1hr=60m
      * 1d=24hr
      */
+    //시간 단위 설정
     const oneDay = 24 * 60 * 60 * 1000;
     const oneHour = 60 * 60 * 1000;
     const oneMinute = 60 * 1000;
