@@ -183,6 +183,7 @@ nav {
 }
 .links a {
     color: var(--clr-grey-3);
+    font-weight: 700;
     font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
