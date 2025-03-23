@@ -12,11 +12,11 @@ let editElement;
 let editFlag = false;
 let editID = "";
 // ****** EVENT LISTENERS **********
-// submit form
+// form 제출
 form.addEventListener("submit", addItem);
-//clear items
+//아이템 리셋
 clearBtn.addEventListener("click", clearItems);
-//load items
+//아이템 로드
 window.addEventListener("DOMContentLoaded", setupItems);
 // ****** FUNCTIONS **********
 function addItem(e) {
@@ -30,7 +30,7 @@ function addItem(e) {
         displayAlert("item added to the list", "success");
         //show conatiner
         container.classList.add("show-container");
-        //add to local storage
+        //로컬 저장소 저장
         addToLocalStorage(id, value);
         //set back to default
         setBackToDefault();
@@ -44,18 +44,18 @@ function addItem(e) {
         displayAlert("please enter value", "danger");
     }
 }
-//display alert
+//아이템 alert
 function displayAlert(text, action) {
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
 
-    //remove alert
+    //alert 아이템 삭제
     setTimeout(function () {
         alert.textContent = "";
         alert.classList.remove(`alert-${action}`);
     }, 1000);
 }
-//clear items
+//전체삭제
 function clearItems() {
     const items = document.querySelectorAll(".grocery-item");
     if (items.length > 0) {
@@ -66,7 +66,6 @@ function clearItems() {
     container.classList.remove("show-container");
     displayAlert("empty list", "danger");
     setBackToDefault();
-    //localStorage.removeItem("list");
 }
 
 //delete function
